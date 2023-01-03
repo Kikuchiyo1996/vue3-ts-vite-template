@@ -3,9 +3,11 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 import { loginRouter } from './login'
+import { homeRouter } from './home'
 
 const routes: RouteRecordRaw[] = [
 	...loginRouter,
+	...homeRouter,
 	{
 		path: '/404',
 		component: () => import('@/views/error-page/404.vue'),
