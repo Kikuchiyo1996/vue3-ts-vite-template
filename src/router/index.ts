@@ -3,10 +3,8 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 import { loginRouter } from './login'
-import { awardRouter } from './award-manage'
 
 const routes: RouteRecordRaw[] = [
-	...awardRouter,
 	...loginRouter,
 	{
 		path: '/404',
