@@ -1,0 +1,69 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.w {
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+html,
+body,
+#app {
+	width: 100%;
+	height: 100%;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+}
+
+.placeholder {
+	color: #c8c9cc;
+}
+div {
+	box-sizing: border-box;
+}
+
+img {
+	vertical-align: middle;
+	image-rendering: auto;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.eye-catching {
+	color: rgb(214, 81, 82);
+}
+.tip-color {
+	color: #299aff;
+}
+.text-center {
+	text-align: center;
+}
+.cursor-point {
+	cursor: pointer;
+}
+.gray-font {
+	color: #9fa3a6;
+}

@@ -1,0 +1,50 @@
+{
+	"compilerOptions": {
+		// ECMA版本
+		"target": "esnext",
+		// 解析非相对模块名的基准目录
+		"baseUrl": ".",
+		// 从 tslib 导入辅助工具函数
+		"importHelpers": true,
+		// 指定生成哪个模块系统代码
+		"module": "esnext",
+		// 严格检查
+		"strict": true,
+		// jsx支持
+		"jsx": "preserve",
+		// 生成map文件
+		"sourceMap": true,
+		// 解析json文件
+		"resolveJsonModule": true,
+		// ES模块的互操作
+		"esModuleInterop": true,
+		// 决定如何处理模块。
+		"moduleResolution": "node",
+		// 编译过程中需要引入的库文件
+		"lib": ["esnext", "dom"],
+		"skipLibCheck": true, // 针对element-puls的ts打包校验
+		// 允许对不包含默认导出的模块使用默认导入
+		"allowSyntheticDefaultImports": true,
+		"types": ["element-plus/global", "node", "vite-plugin-svg-icons/client"],
+		"paths": {
+			"@/*": ["src/*"],
+			"@components/*": ["src/components/*"],
+			"@utils/*": ["src/utils/*"]
+		},
+		"useDefineForClassFields": true
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"src/utils/shopifyIntercept.ts",
+		"src/naive.ts"
+	],
+	"exclude": ["node_modules"],
+	"references": [
+		{
+			"path": "./tsconfig.vite.json"
+		}
+	]
+}

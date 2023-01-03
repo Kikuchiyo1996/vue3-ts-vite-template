@@ -1,0 +1,77 @@
+{
+  "name": "vite",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "preview": "vite preview",
+    "dev": "vite serve --mode development",
+    "build:dev": "vite build --mode development",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode production",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --config .prettierrc --write"
+    ],
+    "*.{html,css,less,scss,md}": [
+      "prettier --config .prettierrc --write"
+    ]
+  },
+  "resolutions": {
+    "bin-wrapper": "npm:bin-wrapper-china"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^1.1.4",
+    "@vueuse/core": "^9.3.1",
+    "axios": "^0.26.1",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "pinia": "2.0.12",
+    "pinia-plugin-persistedstate": "^1.6.1",
+    "vue": "^3.2.31",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "4.0.14"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "@types/node": "^17.0.21",
+    "@types/nprogress": "^0.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "@vitejs/plugin-vue": "^2.2.4",
+    "commitizen": "^4.2.4",
+    "cz-git": "^1.2.1",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "naive-ui": "^2.34.3",
+    "prettier": "^2.6.0",
+    "rollup": "^2.70.1",
+    "rollup-plugin-visualizer": "^5.6.0",
+    "sass": "^1.49.9",
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6",
+    "vite-plugin-cdn-import": "^0.3.5",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vue-tsc": "^0.29.8"
+  }
+}
